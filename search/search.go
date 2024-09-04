@@ -33,16 +33,18 @@ func compileRegexes(regexList []string) ([]*regexp.Regexp, error) {
 	return compiledRegexes, nil
 }
 
-func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regexp, customFileTypeList string, extenOnlyFlag bool) ([]string, error) {
+func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regexp, customFileTypeList string, extenOnlyFlag bool, sizeLimit int64, charLimit int) ([]string, error) {
 
 	var results []string
 
 	size := info.Size()
 
-	if info.IsDir() || size > guize.FileSizeLimit {
+	if info.IsDir() && size > sizeLimit {
 		return results, nil
 	}
-
+	/*if size > sizeLimit {
+		return results, nil
+	}*/
 	ext := filepath.Ext(path)
 
 	if ext == "" { // 如果文件没有拓展名，则跳过
@@ -58,7 +60,6 @@ func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regex
 				break
 			}
 		}
-
 	} else {
 		UpdateFileTypes(guize.CusFileTypes, "custom", customFileTypeList)
 		for k, v := range guize.CusFileTypes {
@@ -96,6 +97,7 @@ func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regex
 
 		//过滤掉包含黑名单中任意一个元素的行
 		if guolv.ContainsAny(line, guize.Blacklist) {
+
 			continue
 
 		}
@@ -118,7 +120,7 @@ func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regex
 
 		matchedContent := fmt.Sprintf("%s\n", lineStr)
 
-		if utf8.RuneCountInString(matchedContent) <= guize.CharLimit {
+		if utf8.RuneCountInString(matchedContent) <= charLimit {
 			matchedContents = append(matchedContents, matchedContent)
 		}
 
@@ -171,7 +173,7 @@ func SearchConfigFiles(path string, info os.FileInfo, allRegexes []*regexp.Regex
 	return results, nil
 }
 
-func Searchall(path string, userRegexList []string, userOnlyFlag bool, customFileTypeList string, extenOnlyFlag bool) {
+func Searchall(path string, userRegexList []string, userOnlyFlag bool, customFileTypeList string, extenOnlyFlag bool, sizeLimit int64, charLimit int) {
 
 	//获取cpu核心数
 	numCores := runtime.NumCPU() // 根据系统的能力调整此值
@@ -261,7 +263,7 @@ func Searchall(path string, userRegexList []string, userOnlyFlag bool, customFil
 				return nil
 			}
 
-			res, err := SearchConfigFiles(path, info, CompiledRegexes, customFileTypeList, extenOnlyFlag)
+			res, err := SearchConfigFiles(path, info, CompiledRegexes, customFileTypeList, extenOnlyFlag, sizeLimit, charLimit)
 			if err != nil {
 				errChan <- err
 				return nil

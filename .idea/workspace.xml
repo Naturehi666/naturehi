@@ -33,7 +33,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../Program Files/Go" />
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -41,10 +41,10 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2RVCTedXW19enndiW8gpwHKhEwn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,6 +55,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build main.go.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
@@ -68,13 +69,12 @@
     &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/10506/GolandProjects/searchall3.5.8_linux专版&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/ax/axbackup/stcs/tools/golong/searchall3.5.9/main.go&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoProjectSettingsConfigurable&quot;
   }
 }</component>
@@ -86,11 +86,11 @@
       <recent name="C:\Users\10506\GolandProjects\searchall3.4\tuozhan" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ax\axbackup\stcs\tools\golong\searchall3.5.9" />
+      <recent name="E:\ax\axbackup\stcs\tools\golong\searchall3.5.9\tuozhan" />
       <recent name="C:\Users\10506\GolandProjects\searchall3.5.3" />
       <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\browser\chromium" />
       <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\crypto" />
-      <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\browser" />
-      <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\browser\firefox" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
@@ -103,41 +103,60 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build flagsearch.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="searchall3.5.6" />
+    <configuration name="go build  main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="searchall3.5.10" />
       <working_directory value="$PROJECT_DIR$" />
+      <parameters value="search  -p  ." />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <kind value="FILE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/flagsearch/flagsearch.go|$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build flagsearch.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
       <kind value="FILE" />
       <package value="searchall3.5" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/flagsearch/flagsearch.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build flagsearch.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="searchall3.2" />
+    <configuration name="go build liulanqi.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
+      <package value="searchall3.5" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/flagsearch/flagsearch.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main3.4.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="searchall3.2" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main3.4.go" />
+      <filePath value="$PROJECT_DIR$/tuozhan/liulanqi/liulanqi.go|$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="searchall3.5.6" />
+      <module name="searchall3.5.10" />
       <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
       <kind value="FILE" />
+      <package value="searchall3.5" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build searchall3.5" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="searchall3.5.6" />
+      <module name="searchall3.5.10" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <package value="searchall3.5" />
@@ -155,15 +174,29 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build flagsearch.go" />
+      <item itemvalue="Go Build.go build  main.go" />
+      <item itemvalue="Go Build.go build liulanqi.go" />
+      <item itemvalue="Go Build.go build main.go" />
+      <item itemvalue="Go Build.go build searchall3.5" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build searchall3.5" />
-        <item itemvalue="Go Build.go build flagsearch.go (1)" />
-        <item itemvalue="Go Build.go build main3.4.go" />
         <item itemvalue="Go Build.go build flagsearch.go" />
+        <item itemvalue="Go Build.go build  main.go" />
+        <item itemvalue="Go Build.go build liulanqi.go" />
+        <item itemvalue="Go Build.go build searchall3.5" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-e58f7cfedaf7-155fe4b6e3a0-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.14015.113" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

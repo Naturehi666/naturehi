@@ -74,7 +74,7 @@ func (c *Chromium) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	return data, nil
 }
 
-func (c *Chromium) copyItemToLocal() error {
+/*func (c *Chromium) copyItemToLocal() error {
 	for i, path := range c.itemPaths {
 		filename := i.String()
 		var err error
@@ -113,6 +113,59 @@ func (c *Chromium) copyItemToLocal() error {
 		}
 	}
 	return nil
+}*/
+
+func (c *Chromium) copyItemToLocal() error {
+	for i, path := range c.itemPaths {
+		filename := i.String() // 使用i的.String()方法来生成filename
+		var err error
+
+		if fileutil.IsDirExists(path) {
+			// 处理目录类型的项目
+			switch i {
+			case item.ChromiumLocalStorage, item.ChromiumSessionStorage:
+				// LocalStorage和SessionStorage使用相同的复制逻辑
+				err = fileutil.CopyDir(path, filename, "lock")
+			case item.ChromiumExtension:
+				// 对Chrome扩展，需确保manifest.json存在
+				manifestPath := filepath.Join(path, "manifest.json")
+				if fileutil.IsFileExists(manifestPath) {
+					err = fileutil.CopyDirHasSuffix(path, filename, "manifest.json")
+				} else {
+					// 如果manifest.json不存在，跳过当前项
+					continue
+				}
+			default:
+				// 其他目录类型的项直接复制
+				err = fileutil.CopyDir(path, filename, "")
+			}
+		} else if i == item.ChromiumCookie {
+			// 特殊处理ChromiumCookie
+			switch runtime.GOOS {
+			case "windows":
+				if fileutil.CheckIfElevated() {
+					// 高权限下的处理流程
+					npath := fileutil.EnsureNTFSPath(path)
+					npathRela := strings.Join(npath[1:], "//")
+					err = fileutil.TryRetrieveFile(npath[0], npathRela, filename)
+				} else {
+					// 低权限下简单复制文件
+					err = fileutil.CopyFile(path, filename)
+				}
+			default:
+				// 非Windows系统下的处理
+				err = fileutil.CopyFile(path, filename)
+			}
+		} else {
+			// 默认情况下，尝试复制文件
+			err = fileutil.CopyFile(path, filename)
+		}
+
+		if err != nil {
+			return err //改动的地方
+		}
+	}
+	return nil
 }
 
 // userItemPaths return a map of user to item path, map[profile 1][item's name & path key pair]
@@ -121,7 +174,7 @@ func (c *Chromium) userItemPaths(profilePath string, items []item.Item) (map[str
 	parentDir := fileutil.ParentDir(profilePath)
 	err := filepath.Walk(parentDir, chromiumWalkFunc(items, multiItemPaths))
 	if err != nil {
-		return nil, err
+		return nil, err //改动的地方
 	}
 	var keyPath string
 	var dir string
@@ -149,6 +202,11 @@ func (c *Chromium) userItemPaths(profilePath string, items []item.Item) (map[str
 // chromiumWalkFunc return a filepath.WalkFunc to find item's path
 func chromiumWalkFunc(items []item.Item, multiItemPaths map[string]map[item.Item]string) filepath.WalkFunc {
 	return func(path string, info fs.FileInfo, err error) error {
+
+		// 确保info不为nil，这是必要的，因为如果err为nil且info也为nil，可能会导致后续调用info.Name()时发生nil指针解引用错误
+		if err != nil || info == nil {
+			return nil // 返回err，可能会停止遍历，根据情况决定是否返回nil或err
+		} //改动的地方
 		for _, v := range items {
 			if info.Name() == v.FileName() {
 				if strings.Contains(path, "System Profile") {
@@ -165,7 +223,7 @@ func chromiumWalkFunc(items []item.Item, multiItemPaths map[string]map[item.Item
 				}
 			}
 		}
-		return err
+		return nil
 	}
 }
 

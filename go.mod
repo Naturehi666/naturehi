@@ -16,7 +16,9 @@ require (
 	github.com/urfave/cli/v2 v2.25.7
 	golang.org/x/crypto v0.12.0
 	golang.org/x/exp v0.0.0-20230817173708-d852ddb80c63
+	golang.org/x/sys v0.11.0
 	golang.org/x/text v0.12.0
+	www.velocidex.com/golang/go-ntfs v0.1.1
 )
 
 require (
@@ -27,7 +29,6 @@ require (
 	github.com/gookit/goutil v0.6.12 // indirect
 	github.com/gookit/gsr v0.1.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.3 // indirect
-	github.com/kr/pretty v0.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
@@ -36,9 +37,5 @@ require (
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	golang.org/x/sync v0.3.0 // indirect
-	golang.org/x/sys v0.11.0 // indirect
-	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
-	gopkg.in/yaml.v2 v2.2.4 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	www.velocidex.com/golang/go-ntfs v0.1.1 // indirect
 )

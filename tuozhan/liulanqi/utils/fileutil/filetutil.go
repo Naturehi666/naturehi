@@ -86,8 +86,12 @@ func CopyDir(src, dst, skip string) error {
 // CopyDirHasSuffix copies the directory from the source to the destination
 // contain is the file if you want to copy, and rename copied filename with dir/index_filename
 func CopyDirHasSuffix(src, dst, suffix string) error {
+
 	var files []string
 	err := filepath.Walk(src, func(path string, f os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		} //改动的地方
 		if !f.IsDir() && strings.HasSuffix(strings.ToLower(f.Name()), suffix) {
 			files = append(files, path)
 		}
@@ -106,6 +110,7 @@ func CopyDirHasSuffix(src, dst, suffix string) error {
 		if err != nil {
 			return err
 		}
+
 	}
 	return nil
 }
@@ -339,9 +344,9 @@ func CheckIfElevated() bool {
 		return true
 	}
 
-	fmt.Println("If the cookie does not solve, choose one of two methods\n" +
-		"1.Please upgrade to the administrator system permission to run the command again.\n" +
-		"2.Please close browser and run the command again. chrome can read the Cookie.\n" +
-		"If you solve it, congratulations!")
+	fmt.Println("如果谷歌Cookies没有解出来以下有两种方法任选其一即可\n" +
+		"1.请提升到管理员权限重新运行命令,谷歌能读取Cookie.\n" +
+		"2.请关闭谷歌浏览器重新运行命令,谷歌能读取Cookie\n" +
+		"如果解出来了恭喜恭喜！")
 	return false
 }

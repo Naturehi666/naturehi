@@ -40,7 +40,7 @@ func Execute(browserFlag string, profilePath string) {
 	}
 
 	if _, err := os.Stat(outputDir); err == nil {
-		log.Notice("Current directory generation folder:results")
+		log.Notice("请查看当前目录生成了文件夹:results")
 	} else {
 
 	}
@@ -48,11 +48,11 @@ func Execute(browserFlag string, profilePath string) {
 
 func CompressResult() error {
 	if err := fileutil.CompressDir(outputDir); err != nil {
-		return fmt.Errorf("Compression failed：%s", err.Error())
+		return fmt.Errorf("压缩失败：%s", err.Error())
 	}
 
 	dir, _ := os.Getwd()
-	log.Noticef("Generate compressed package: %s", filepath.Join(dir, "\\results\\results.zip"))
+	log.Noticef("请查看当前目录生成压缩包: %s", filepath.Join(dir, "\\results\\results.zip"))
 
 	return nil
 }
