@@ -344,9 +344,6 @@ func CheckIfElevated() bool {
 		return true
 	}
 
-	fmt.Println("如果谷歌Cookies没有解出来以下有两种方法任选其一即可\n" +
-		"1.请提升到管理员权限重新运行命令,谷歌能读取Cookie.\n" +
-		"2.请关闭谷歌浏览器重新运行命令,谷歌能读取Cookie\n" +
-		"如果解出来了恭喜恭喜！")
+	fmt.Println("如果Cookies没有解出来，请提升到管理员权限重新运行命令\n")
 	return false
 }

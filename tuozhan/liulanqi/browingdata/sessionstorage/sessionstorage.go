@@ -28,7 +28,7 @@ type session struct {
 
 const maxLocalStorageValueLength = 1024 * 2
 
-func (c *ChromiumSessionStorage) Parse(_ []byte) error {
+func (c *ChromiumSessionStorage) Parse(_ []byte, name string) error {
 	db, err := leveldb.OpenFile(item.TempChromiumSessionStorage, nil)
 	if err != nil {
 		return err

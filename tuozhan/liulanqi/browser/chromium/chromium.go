@@ -49,7 +49,7 @@ func (c *Chromium) Name() string {
 	return c.name
 }
 
-func (c *Chromium) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
+func (c *Chromium) BrowsingData(isFullExport bool, name string) (*browingdata.Data, error) {
 	items := c.items
 	if !isFullExport {
 		items = item.FilterSensitiveItems(c.items)
@@ -67,7 +67,7 @@ func (c *Chromium) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	}
 
 	c.masterKey = masterKey
-	if err := data.Recovery(c.masterKey); err != nil {
+	if err := data.Recovery(c.masterKey, name); err != nil {
 		return nil, err
 	}
 

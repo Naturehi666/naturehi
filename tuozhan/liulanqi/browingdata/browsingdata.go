@@ -22,7 +22,7 @@ type Data struct {
 }
 
 type Source interface {
-	Parse(masterKey []byte) error
+	Parse(masterKey []byte, name string) error
 
 	Name() string
 
@@ -37,9 +37,9 @@ func New(items []item.Item) *Data {
 	return bd
 }
 
-func (d *Data) Recovery(masterKey []byte) error {
+func (d *Data) Recovery(masterKey []byte, name string) error {
 	for _, source := range d.sources {
-		if err := source.Parse(masterKey); err != nil {
+		if err := source.Parse(masterKey, name); err != nil {
 			log.Errorf("parse %s error %s", source.Name(), err.Error())
 		}
 	}

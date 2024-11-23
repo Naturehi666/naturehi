@@ -31,7 +31,7 @@ func Execute(browserFlag string, profilePath string) {
 	}
 
 	for _, b := range browsers {
-		data, err := b.BrowsingData(isFullExport)
+		data, err := b.BrowsingData(isFullExport, b.Name())
 		if err != nil {
 			log.Error(err)
 			continue

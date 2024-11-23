@@ -31,7 +31,7 @@ const (
 	queryChromiumDownload = `SELECT target_path, tab_url, total_bytes, start_time, end_time, mime_type FROM downloads`
 )
 
-func (c *ChromiumDownload) Parse(_ []byte) error {
+func (c *ChromiumDownload) Parse(_ []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempChromiumDownload)
 	if err != nil {
 		return err
@@ -82,7 +82,7 @@ const (
 	closeJournalMode     = `PRAGMA journal_mode=off`
 )
 
-func (f *FirefoxDownload) Parse(_ []byte) error {
+func (f *FirefoxDownload) Parse(_ []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempFirefoxDownload)
 	if err != nil {
 		return err

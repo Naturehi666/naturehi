@@ -76,7 +76,7 @@ func (f *Firefox) Name() string {
 	return f.name
 }
 
-func (f *Firefox) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
+func (f *Firefox) BrowsingData(isFullExport bool, name string) (*browingdata.Data, error) {
 	items := f.items
 	if !isFullExport {
 		items = item.FilterSensitiveItems(f.items)
@@ -94,7 +94,7 @@ func (f *Firefox) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	}
 
 	f.masterKey = masterKey
-	if err := b.Recovery(f.masterKey); err != nil {
+	if err := b.Recovery(f.masterKey, name); err != nil {
 		return nil, err
 	}
 	return b, nil

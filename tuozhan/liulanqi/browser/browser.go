@@ -17,7 +17,7 @@ type Browser interface {
 	// Name is browser's name
 	Name() string
 	// BrowsingData returns all browsing data in the browser.
-	BrowsingData(isFullExport bool) (*browingdata.Data, error)
+	BrowsingData(isFullExport bool, name string) (*browingdata.Data, error)
 }
 
 // PickBrowsers returns a list of browsers that match the name and profile.
@@ -55,6 +55,7 @@ func pickChromium(name, profile string) []Browser {
 			for _, b := range multiChromium {
 
 				log.Noticef("find browser %s success", b.Name())
+
 				browsers = append(browsers, b)
 			}
 
