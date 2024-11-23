@@ -33,7 +33,7 @@ const (
 	queryChromiumLogin = `SELECT origin_url, username_value, password_value, date_created FROM logins`
 )
 
-func (c *ChromiumPassword) Parse(masterKey []byte) error {
+func (c *ChromiumPassword) Parse(masterKey []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempChromiumPassword)
 	if err != nil {
 		return err
@@ -100,7 +100,7 @@ const (
 	queryYandexLogin = `SELECT action_url, username_value, password_value, date_created FROM logins`
 )
 
-func (c *YandexPassword) Parse(masterKey []byte) error {
+func (c *YandexPassword) Parse(masterKey []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempYandexPassword)
 	if err != nil {
 		return err
@@ -169,7 +169,7 @@ const (
 	queryNssPrivate = `SELECT a11, a102 from nssPrivate`
 )
 
-func (f *FirefoxPassword) Parse(masterKey []byte) error {
+func (f *FirefoxPassword) Parse(masterKey []byte, name string) error {
 	globalSalt, metaBytes, nssA11, nssA102, err := getFirefoxDecryptKey(item.TempFirefoxKey4)
 	if err != nil {
 		return err

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc93a352-1a28-41ec-af14-246a5d3a56c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/flagsearch/flagsearch.go" beforeDir="false" afterPath="$PROJECT_DIR$/flagsearch/flagsearch.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/guize/guize.go" beforeDir="false" afterPath="$PROJECT_DIR$/guize/guize.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browingdata/browsingdata.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browingdata/browsingdata.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_darwin.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_darwin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_linux.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_linux.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/browser_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/chromium/chromium_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/chromium/chromium_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/consts.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/consts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/browser/firefox/firefox.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/browser/firefox/firefox.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/crypto/crypto_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/crypto/crypto_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tuozhan/liulanqi/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/tuozhan/liulanqi/log/log.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../Program Files/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2RVCTedXW19enndiW8gpwHKhEwn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build main.go.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/10506&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoProjectSettingsConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\10506\GolandProjects\searchall3.5.3\search" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.5\search" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.4\search" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.4\tuozhan" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ax\axbackup\stcs\tools\golong\searchall3.5.9" />
+      <recent name="E:\ax\axbackup\stcs\tools\golong\searchall3.5.9\tuozhan" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.5.3" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\browser\chromium" />
+      <recent name="C:\Users\10506\GolandProjects\searchall3.5\tuozhan\liulanqi\crypto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="searchall3.2" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build  main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="search  -p  ." />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <kind value="FILE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/flagsearch/flagsearch.go|$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build flagsearch.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <kind value="FILE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/flagsearch/flagsearch.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build liulanqi.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/tuozhan/liulanqi/liulanqi.go|$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="browser -b edge" />
+      <sudo value="true" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.GoAwsConnectionRunConfigurationExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <kind value="FILE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build searchall3.5" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="searchall3.5.10" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="searchall3.5" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="searchall3.2" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build  main.go" />
+      <item itemvalue="Go Build.go build flagsearch.go" />
+      <item itemvalue="Go Build.go build liulanqi.go" />
+      <item itemvalue="Go Build.go build main.go" />
+      <item itemvalue="Go Build.go build searchall3.5" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build flagsearch.go" />
+        <item itemvalue="Go Build.go build  main.go" />
+        <item itemvalue="Go Build.go build liulanqi.go" />
+        <item itemvalue="Go Build.go build searchall3.5" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-5df93f7ad4aa-dfc284eb1eb8-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-242.20224.424" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-GO-242.20224.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

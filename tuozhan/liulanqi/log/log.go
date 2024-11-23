@@ -12,6 +12,11 @@ func init() {
 	std = newStdLogger(slog.NoticeLevel)
 }
 
+// SetVerbose set log level to debug
+func SetVerbose() {
+	std = newStdLogger(slog.DebugLevel)
+}
+
 const template = "[{{level}}] {{message}} {{data}} {{extra}}\n"
 
 // newStdLogger is a new std logger
@@ -24,6 +29,21 @@ func newStdLogger(level slog.Level) *slog.SugaredLogger {
 		sl.Formatter.(*slog.TextFormatter).EnableColor = false
 		sl.Formatter.(*slog.TextFormatter).SetTemplate(template)
 	})
+}
+
+// Trace logs a message at level Trace
+func Trace(args ...interface{}) {
+	std.Log(slog.TraceLevel, args...)
+}
+
+// Tracef logs a message at level Trace
+func Tracef(format string, args ...interface{}) {
+	std.Logf(slog.TraceLevel, format, args...)
+}
+
+// Info logs a message at level Info
+func Info(args ...interface{}) {
+	std.Log(slog.InfoLevel, args...)
 }
 
 // Infof logs a message at level Info
@@ -47,15 +67,35 @@ func Warn(args ...interface{}) {
 }
 
 // Warnf logs a message at level Warn
+func Warnf(format string, args ...interface{}) {
+	std.Logf(slog.WarnLevel, format, args...)
+}
 
 // Error logs a message at level Error
 func Error(args ...interface{}) {
 	std.Log(slog.ErrorLevel, args...)
 }
 
+// ErrorT logs a error type at level Error
+func ErrorT(err error) {
+	if err != nil {
+		std.Log(slog.ErrorLevel, err)
+	}
+}
+
 // Errorf logs a message at level Error
 func Errorf(format string, args ...interface{}) {
 	std.Logf(slog.ErrorLevel, format, args...)
+}
+
+// Debug logs a message at level Debug
+func Debug(args ...interface{}) {
+	std.Log(slog.DebugLevel, args...)
+}
+
+// Debugf logs a message at level Debug
+func Debugf(format string, args ...interface{}) {
+	std.Logf(slog.DebugLevel, format, args...)
 }
 
 // Fatal logs a message at level Fatal
@@ -66,4 +106,14 @@ func Fatal(args ...interface{}) {
 // Fatalf logs a message at level Fatal
 func Fatalf(format string, args ...interface{}) {
 	std.Logf(slog.FatalLevel, format, args...)
+}
+
+// Panic logs a message at level Panic
+func Panic(args ...interface{}) {
+	std.Log(slog.PanicLevel, args...)
+}
+
+// Panicf logs a message at level Panic
+func Panicf(format string, args ...interface{}) {
+	std.Logf(slog.PanicLevel, format, args...)
 }

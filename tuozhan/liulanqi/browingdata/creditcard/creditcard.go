@@ -28,7 +28,7 @@ const (
 	queryChromiumCredit = `SELECT guid, name_on_card, expiration_month, expiration_year, card_number_encrypted, billing_address_id, nickname FROM credit_cards`
 )
 
-func (c *ChromiumCreditCard) Parse(masterKey []byte) error {
+func (c *ChromiumCreditCard) Parse(masterKey []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempChromiumCreditCard)
 	if err != nil {
 		return err
@@ -84,7 +84,7 @@ func (c *ChromiumCreditCard) Len() int {
 
 type YandexCreditCard []card
 
-func (c *YandexCreditCard) Parse(masterKey []byte) error {
+func (c *YandexCreditCard) Parse(masterKey []byte, name string) error {
 	db, err := sql.Open("sqlite3", item.TempYandexCreditCard)
 	if err != nil {
 		return err

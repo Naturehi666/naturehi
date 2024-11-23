@@ -219,7 +219,7 @@ func pkcs5UnPadding(src []byte, blockSize int) []byte {
 func des3Decrypt(key, iv []byte, src []byte) ([]byte, error) {
 	block, err := des.NewTripleDESCipher(key)
 	if err != nil {
-		return nil, err
+		return nil, nil
 	}
 	blockMode := cipher.NewCBCDecrypter(block, iv)
 	sq := make([]byte, len(src))

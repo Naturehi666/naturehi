@@ -23,10 +23,10 @@ const (
 	manifest = "manifest.json"
 )
 
-func (c *ChromiumExtension) Parse(_ []byte) error {
+func (c *ChromiumExtension) Parse(_ []byte, name string) error {
 	files, err := fileutil.FilesInFolder(item.TempChromiumExtension, manifest)
 	if err != nil {
-		return err
+		return nil
 	}
 	defer os.RemoveAll(item.TempChromiumExtension)
 	for _, f := range files {
@@ -56,7 +56,7 @@ func (c *ChromiumExtension) Len() int {
 
 type FirefoxExtension []*extension
 
-func (f *FirefoxExtension) Parse(_ []byte) error {
+func (f *FirefoxExtension) Parse(_ []byte, name string) error {
 	s, err := fileutil.ReadFile(item.TempFirefoxExtension)
 	if err != nil {
 		return err
